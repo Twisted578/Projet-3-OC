@@ -1,7 +1,32 @@
 <?php  
 include 'INC/header.php'; 
 
+
+ini_set('display_errors',1); 
 ?>
+
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->		
+<div class="wrap">
+	<!-- NAVIGATION -->		
+	<div id="nav"> 
+    <div class="container clearfix">
+
+		<!-- MENU -->		
+		<div id="navigation">
+				<ul id="menu" class="menu">
+					<li ><a href="index.html">Acceuil</a></li>
+					<li ><a href="articles.html">Livre</a></li>
+					<li ><a href="contact.html">Contact</a></li>
+					s
+				</ul>	
+
+				<div class="membres">
+					<ul>
+						<li><a href="login.html">Se connecter</a></li>
+						<li><a href="signup.html">S'inscrire</a></li>
+					</ul>
+				</div>	
 
 <!-- PRESENTATION -->
 <div id="presentation">
