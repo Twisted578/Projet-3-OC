@@ -34,7 +34,7 @@
 				<ul id="menu" class="menu">
 					<li ><a href="index.html">Acceuil</a></li>
 					<li ><a href="articles.html">Livre</a></li>
-					<li ><a href="contact.html">Contact</a></li>
+					<li ><a href="contact.php">Contact</a></li>
 					
 				</ul>	
 
