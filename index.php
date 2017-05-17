@@ -1,32 +1,6 @@
-<?php  
-include 'INC/header.php'; 
-
-
-ini_set('display_errors',1); 
+<?php
+include 'INC/header.php' 
 ?>
-
-<body>
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->		
-<div class="wrap">
-	<!-- NAVIGATION -->		
-	<div id="nav"> 
-    <div class="container clearfix">
-
-		<!-- MENU -->		
-		<div id="navigation">
-				<ul id="menu" class="menu">
-					<li ><a href="index.html">Acceuil</a></li>
-					<li ><a href="articles.html">Livre</a></li>
-					<li ><a href="contact.html">Contact</a></li>
-					s
-				</ul>	
-
-				<div class="membres">
-					<ul>
-						<li><a href="login.html">Se connecter</a></li>
-						<li><a href="signup.html">S'inscrire</a></li>
-					</ul>
-				</div>	
 
 <!-- PRESENTATION -->
 <div id="presentation">
@@ -140,13 +114,15 @@ ini_set('display_errors',1);
 			</section>
 			<div class="clearfix"></div>
 			<div class="accueil">
-				<h3>A propos</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h3>Les 6 raisons qui m'ont poussé à faire ces deux métiers !</h3>
+				<ul>
+					<li><strong>Voyager :</strong></br>Oui j'adore voyager et découvrir des paysages absolument majesteux à travers le monde.</li>
+					<li><strong>Rencontrer :</strong></br>Dans le cadre de mon travail j'ai la chance de rencontrer des gens de différentes cultures.</li>
+					<li><strong>Progresser :</strong></br>Après 10 ans de voyage à travers le monde j'ai une très bonne maîtrise de l'anglais aujour'd'hui.</li>
+					<li><strong>Apprendre :</strong></br>Dans ce genre de métier on ne cesse jamais d'apprendre et pour quelqu'un qui à soif de savoir c'est le graal.</li>
+					<li><strong>Vivre :</strong></br>Depuis 10 ans je vis une expérience inpensable et je suis conscient de la chance que j'ai.</li>
+					<li><strong>Transmettre :</strong></br>A travers mes livres je peux transmettre tout l'apprentissage d'une passé à voyager dans le monde.</li>
+				</ul>
 			</div>
 			
 

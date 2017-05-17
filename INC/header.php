@@ -43,4 +43,37 @@
 						<li><a href="login.html">Se connecter</a></li>
 						<li><a href="signup.html">S'inscrire</a></li>
 					</ul>
-				</div>	
+				</div>		
+	
+		</div> <!-- #navigation -->
+
+		<div id="search">
+			
+			<form method="get" id="searchform" action="">
+				<div>
+					<input type="text" value="Chercher" name="q" id="q" onfocus="if (this.value == 'Chercher') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Chercher';}" />
+					<input type="submit" id="searchsubmit" value="Go" />
+				</div>
+			</form>
+		</div> <!--#search -->
+
+    </div> <!-- container -->
+	</div> <!--#nav -->
+
+	<!-- HEADER -->
+	<header>
+	    <div class="container clearfix">
+
+			<div id="logo">
+				<a href="index.html" title="Mon blog"><img  src="img/logo4.png" alt="Mon blog" /></a>
+			</div>
+			<div id="reseaux">
+				<ul>
+					<li><a href="#" class="fb"></a></li>
+					<li><a href="#" class="tt"></a></li>
+					<li><a href="#" class="gg"></a></li>
+					<li><a href="#" class="yt"></a></li>
+				</ul>
+			</div>		
+	    </div> <!-- container -->
+	</header>
