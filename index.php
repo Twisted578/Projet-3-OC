@@ -131,14 +131,11 @@ ini_set('display_errors',1);
 	</div> <!-- contenuPage -->
 </div> <!-- #page -->
 
-<!-- FOOTER -->
-<footer>
-	<div class=" container clearfix">
-		<p>Projet crée et développé par <a href="https://www.facebook.com/guenole.lequentrec">Guénolé Le Quentrec</a> </p>
-		<p>&copy; Athakim - 2013</p>			
-	</div> 
-</footer>
+<?php 
 
+include 'INC/footer.php'
+
+?>
 </div> 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
