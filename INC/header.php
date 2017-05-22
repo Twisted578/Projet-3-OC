@@ -32,16 +32,16 @@
 		<!-- MENU -->		
 		<div id="navigation">
 				<ul id="menu" class="menu">
-					<li ><a href="index.html">Acceuil</a></li>
-					<li ><a href="articles.html">Livre</a></li>
+					<li ><a href="index.php">Acceuil</a></li>
+					<li ><a href="articles.php">Livre</a></li>
 					<li ><a href="contact.php">Contact</a></li>
 					
 				</ul>	
 
 				<div class="membres">
 					<ul>
-						<li><a href="login.html">Se connecter</a></li>
-						<li><a href="signup.html">S'inscrire</a></li>
+						<li><a href="login.php">Se connecter</a></li>
+						<li><a href="signup.php">S'inscrire</a></li>
 					</ul>
 				</div>		
 	

@@ -68,18 +68,14 @@ ini_set('display_errors',1);
 			</section>
 
 			<section class="lastComments boxComments">
+				<?php 
+					$comments=$DB->query("SELECT id,texte from comments ORDER BY created_at LIMIT 5");
+				?>
+
 				<h3>Derniers commentaires</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. </p>
-				<p>Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure </p>
-				<p>dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. </p>
-				<p>Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure </p>
+				<?php foreach ($comments as $comments): ?> 
+					<p><?php echo Texte::limit($comments->texte,150); ?></p>
+				<?php endforeach ?>
 			</section>
 			<div class="clearfix"></div>
 			<div class="accueil">
