@@ -1,0 +1,256 @@
+@import "compass";
+/* ---------------------------------------------------- */
+/*		Administration
+/* ---------------------------------------------------- */
+
+.wrap{
+	background:#EEE;
+}
+.container {
+	width:960px;
+	margin:0 auto;
+}
+h1{
+	color:#444;
+	font-size: 1.6em;
+	padding-left: 10px;
+	
+	@include text-shadow(1px 2px 1px #DDD);
+}
+h2{
+	color:#444;
+	font-size: 1.4em;
+	padding-left: 10px;
+	border-bottom: 1px solid #DDD;
+	@include text-shadow(1px 2px 1px #DDD);
+}
+
+button{
+	border:none;
+	background: none;
+	margin:10px 0;
+	a{
+		display: block;
+		@include border-radius(3px);
+		background:#27b5f0;
+		color:#FFF!important;
+		text-decoration: none;
+		// text-transform: uppercase;
+		font-size: .8em;
+		padding:5px 10px;
+		&:hover{
+			opacity:0.8;
+		}
+	}
+}
+/* ---------------------------------------------------- */
+/*		header
+/* ---------------------------------------------------- */
+header{height:120px;}
+
+#navigation{
+	background: #000; display:block; width: 100%; position:relative;overflow: hidden;
+	@include border-radius(3px);
+	ul { margin: 0; padding: 0; list-style-type: none; 
+
+		li{
+			float:left;
+			ul{display:none;}
+			a{
+				color:#FFF;
+				text-decoration: none;
+				line-height: 40px;
+				font-size: 0.9em;
+				padding:0 10px;
+				display:block;
+			}
+		}
+	}
+
+	.membres{
+		position: absolute;
+		top:0;
+		right:0;
+		a{
+			font-size: .7em;
+			color:#DDD;
+		}
+	}
+}
+
+/* ---------------------------------------------------- */
+/*		Dashboard
+/* ---------------------------------------------------- */
+.bande{
+	@include box-shadow(#BBBBBB 0 0 2px);
+  	background-color:#FFFFFF;
+ 	@include border-radius(10px);
+  margin:20px auto;
+  padding:10px;
+  position:relative;
+}
+#dashboard ul{
+	margin:0;padding:0;
+	li{	
+		display:inline-block;margin:10px;
+		height:60px;
+		min-width:60px;
+		background-color: #EEE;
+		border:1px solid #DDD;
+		padding:10px;
+		font-size: .7em;
+		color:#999;
+		@include text-shadow(1px 1px 1px #FFF);
+		text-transform: uppercase;
+		text-align: center;
+		@include border-radius(5px);
+		position: relative;
+		span{
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			@include border-radius(50%);
+			background: green;
+			padding:3px 8px;
+			color:#FFF;
+			border:1px solid #DDD;
+			@include text-shadow(1px 1px 1px #000);
+			@include box-shadow(2px 1px 1px #DDD);
+		}
+	}
+}
+
+
+/* ---------------------------------------------------- */
+/*		PAge
+/* ---------------------------------------------------- */
+#contenuPage{
+	@include box-shadow(#BBBBBB 0 0 2px);
+  	background-color:#FFFFFF;
+ 	@include border-radius(10px);
+	  margin:20px auto;
+	  padding:10px;
+	  position:relative;
+  .block{
+  	background: #EEE;
+  	border:1px dotted #DDD;
+  	margin:10px;
+  	@include border-radius(5px);
+  }
+  p{
+  	font-size: .9em;
+  	color:#444;
+  	padding:10px ;
+  }
+  ul{
+  	margin:0;padding:0;
+  	li{
+  		display:inline-block;
+  		list-style: none;
+  		width:166px;
+  		height:166px;
+  		text-align: center;
+  		img{
+  			margin:20px;
+  			max-width:80px;
+  			max-height:80px;
+  			border:3px solid #FFF;
+  		}
+  		p{
+  			margin:0;
+  			color:#999;
+  			font-size: .7em;
+			@include text-shadow(1px 1px 1px #FFF);
+			text-transform: uppercase;
+  		}
+  	}
+  }
+
+  table{
+  	width:100%;
+  	background: #EEE;
+  	border:1px solid #DDD;
+  	thead{
+  		background: #000;
+  		color:#FFF;  
+  		font-style: italic;		
+  	}
+  	tbody{
+  		color:#444;
+  		font-size: .9em;
+  	}
+  	tr{
+  		height:40px;
+  		line-height: 40px;
+  		border-bottom: 1px solid #FFF;
+  	}
+  	td{
+  		padding-left: 5px;
+  		&.actions{
+  			width: 150px;
+  		}
+  		a{
+  			text-decoration: none;
+  			color:inherit;
+  		}
+  	}
+  	img{
+  		max-height:30px;
+  		max-width: 30px;
+  	}
+  }
+
+  form{
+  	padding:10px;
+  	border:1px solid #DDD;
+  	background: #EEE;
+  	margin:20px auto;
+	label{
+		display:block;
+		font-weight: bold;
+		font-style: italic;
+		color:#444;
+	}
+	input[type='text'],input[type='email'],input[type='password']{
+		width:250px;
+		height:25px;
+		@include border-radius(3px);
+		outline: none;
+		border:1px solid #DDD;
+		padding-left:5px;
+	}
+	textarea{
+		@include border-radius(3px);
+		outline: none;
+		border:1px solid #DDD;
+		padding:5px;
+		width:100%;
+		min-height: 200px;
+	}
+	input[type="submit"]{
+		background:#27b5f0;
+		border:1px solid #DDD;
+		@include border-radius(3px);
+		color:#FFF;
+		font-size: .8em;
+		padding:5px 10px;
+	}
+	select{
+		height:25px;
+		width:150px;
+		line-height: 25px;
+	}
+  }
+}
+
+
+/* ---------------------------------------------------- */
+/*		Footer
+/* ---------------------------------------------------- */
+.footer{
+	background: #000; display:block; width: 100%; color:#DDD;
+	p{
+		text-align: center;
+		font-size: .8em;
+	}
+}

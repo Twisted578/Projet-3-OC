@@ -1,0 +1,131 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>MonBlog</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/admin.css">
+<!-- nivo slider  -->
+  <link rel="stylesheet" href="js/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+ <link rel="stylesheet" href="js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+
+</head>
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->		
+<div class="wrap">
+	<!-- HEADER -->
+	<header>
+	    <div class="container clearfix">
+
+			<div id="logo">
+				<a href="index.html" title="Mon blog"><img  src="../img/logo.png" alt="Mon blog" /></a>
+			</div>
+			
+	    </div> <!-- container -->
+	</header>
+	<!-- NAVIGATION -->		
+	<div id="nav"> 
+    <div class="container clearfix">
+
+		<!-- MENU -->		
+		<div id="navigation">
+				<ul id="menu" class="menu">
+					<li ><a href="index.html">Dashboard</a></li>
+					<li ><a href="articles.html">Articles</a></li>
+					<li ><a href="com.html">Commentaires</a></li>
+					<li ><a href="cat.html">Categories</a></li>
+					<li ><a href="users.html">Utilisateurs</a></li>
+					
+				</ul>	
+
+				<div class="membres">
+					<ul>
+						<li><a href="login.html">Voir le site</a></li>
+						<li><a href="signup.html">Se déconnecter</a></li>
+					</ul>
+				</div>		
+	
+		</div> <!-- #navigation -->
+
+    </div> <!-- container -->
+	</div> <!--#nav -->
+
+<!-- PAGE -->
+<div id="page">
+    <div id ="contenuPage" class="container clearfix">	
+			<h2>les articles </h2>
+			<button><a href="">Ajouter un article</a> </button>
+			<table>
+				<thead>
+					<tr>
+						<td>image</td>
+						<td>Titre</td>
+						<td class='actions'>Actions</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="../img/img1.png" alt=""> </td>
+						<td><a href="">mon titre du jour</a>	</td>
+						<td>
+							<button><a href="edit.html">Edit</a> </button>
+							<button><a href="del.html">Delete</a> </button>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../img/img1.png" alt=""> </td>
+						<td>mon titre du jour	</td>
+						<td>
+							<button><a href="edit.html">Edit</a> </button>
+							<button><a href="">Delete</a> </button>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../img/img1.png" alt=""> </td>
+						<td>mon titre du jour	</td>
+						<td>
+							<button><a href="edit.html">Edit</a> </button>
+							<button><a href="">Delete</a> </button>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+	</div> <!-- contenuPage -->
+</div> <!-- #page -->
+
+<!-- FOOTER -->
+<footer>
+	<div class=" container clearfix">
+		<div class="footer">
+			<p>Thème créer par athakim pour démonstration de mes formations </p>
+		<p>&copy; Athakim - 2013</p>
+		</div>			
+	</div> 
+</footer>
+
+</div> 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="js/nivo-slider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</body>
+</html>

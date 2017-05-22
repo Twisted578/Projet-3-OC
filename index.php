@@ -48,58 +48,22 @@ ini_set('display_errors',1);
                 </br>
 			</div>
 			<section class="lastArticles boxArticles">
+			<?php
+				$posts=$DB->query("SELECT id,titre,description,image from posts ORDER BY created_at LIMIT 6");
+			?>
 				<h3>Derniers articles </h3>
 				<ul>
+					<?php foreach ($posts as $posts): ?>
 					<li>
-						<a href="">
-							<div class="thumb"><img src="img/photo1.png" alt ="" /></div>
+						<a href="articles.php?id=<?php echo $posts->id; ?>">
+							<div class="thumb"><img src="<?php echo $posts->image; ?>" alt ="<?php $posts->titre ?>" /></div>
 							<div class="detail">
-								<h4>Final FAntasy XIII</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua.  </p>
+								<h4><?php echo $posts->titre; ?></h4>
+								<p><?php echo Texte::limit($posts->description,130); ?></p>
 							</div>
 						</a>
 					</li>
-					<li>
-						<div class="thumb"><img src="img/photo1.png" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="img/photo1.png" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="img/photo1.png" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="img/photo1.png" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="img/photo1.png" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
+					<?php endforeach ?>
 				</ul>
 			</section>
 
