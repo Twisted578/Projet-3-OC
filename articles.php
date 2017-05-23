@@ -117,18 +117,18 @@ include 'INC/header.php';
 				?>
 				<h3>Catégories</h3>
 				<ul>
-					<?php foreach ($cats as $cat); ?>
+					<?php foreach ($cats as $cat): ?>
 						<li><a href="articles.php?categorie=<?php echo $cat->id ?>;"><?php echo $cat->name; ?></a></li>
 					<?php endforeach ?>
 				</ul>
 			</div>
 			<div class="lastComments">
 				
-				<?php include 'INC/lastComments.php' ?>
+				<?php include 'INC/lastComments.php'; ?>
 
 			</div>
 			<div class="lastArticles">
-				<?php include 'INC/lastPosts.php' ?>
+				<?php include 'INC/lastPosts.php'; ?>
 			</div>
 		</div> <!-- #sidebar -->
 

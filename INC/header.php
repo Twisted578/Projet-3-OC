@@ -49,7 +49,7 @@
 
 		<div id="search">
 			
-			<form method="get" id="searchform" action="">
+			<form method="get" id="searchform" action="search.php">
 				<div>
 					<input type="text" value="Chercher" name="q" id="q" onfocus="if (this.value == 'Chercher') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Chercher';}" />
 					<input type="submit" id="searchsubmit" value="Go" />

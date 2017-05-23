@@ -48,10 +48,10 @@ ini_set('display_errors',1);
                 </br>
 			</div>
 			<section class="lastArticles boxArticles">
-			<?php include 'INC/lastPosts.php' ?>
+			<?php include 'INC/lastPosts.php'; ?>
 			</section>
 			<section class="lastComments boxComments">
-				<?php include 'INC/lastComments.php' ?>
+				<?php include 'INC/lastComments.php'; ?>
 			</section>
 			<div class="clearfix"></div>
 			<div class="accueil">
