@@ -30,7 +30,7 @@ class Db{
 				));
 
 		}catch(PDOExeption $e){
-			echo "Erreur : Impossible de se connecter à la base de données.";
+			echo "Erreur : Impossible de se connecter à la base de données."; 
 			die();
 		}
 	}
@@ -41,5 +41,13 @@ class Db{
 
 		return $req->fetchAll(PDO::FETCH_OBJ);
 	}
+	function tquery($sql,$data=array()){
+
+		$req = $this->connexion->prepare($sql);
+		$req->execute($data);
+
+		return $req->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 
 }
