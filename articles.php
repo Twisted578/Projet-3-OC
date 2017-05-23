@@ -2,6 +2,22 @@
 
 include 'INC/includes.php';
 
+//pagination
+$nbr = $DB -> query("SELECT count(*) as nbr FROM posts");
+$perpage = 4;
+$nbr_pages = ceil($nbr[0]->nbr/$perpage);
+
+if (isset($_GET['page'])) {
+	$page = intval($_GET['page']);
+	if ($page > $nbr_pages) {
+		$page = $nbr_pages;
+	}
+}else{
+	$page = 1;
+}
+
+$permierPage = ($page-1) * $perpage;
+
 //posts
 $sql ="SELECT posts.id,posts.titre,posts.description,posts.created_at,posts.image,posts.category_id,users.username,categories.name FROM posts
 		INNER JOIN categories ON category_id= category.id
@@ -59,10 +75,15 @@ include 'INC/header.php';
 			
 			<div class="pagination">
 				<ul>
-					<li><a href="" class="active">1</a></li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li><a href="">4</a></li>
+					<?php
+					for ($i=1; $i <= $nbr_pages; $i++) { 
+						if ($i == $page) {
+							echo '<li class="active"><a href="">'.$i.'</a></li>';
+						}else{
+							echo '<li><a href="articles.php?page='.$i.'">'.$i.'</a></li>';
+						}
+					}
+					?>
 				</ul>
 			</div>
 
