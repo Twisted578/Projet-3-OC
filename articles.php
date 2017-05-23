@@ -112,83 +112,17 @@ include 'INC/header.php';
 			<div class="category">
 				<h3>Catégories</h3>
 				<ul>
-					<li><a href="">Jeux Vidéo</a></li>
-					<li><a href="">Films</a></li>
-					<li><a href="">Photos</a></li>
-					<li><a href="">Vidéos</a></li>
-					<li><a href="">Logiciels</a></li>
-					<li><a href="">Divers</a></li>
+					<li><a href="">Résumé</a></li>
+					<li><a href="">Chapitres</a></li>
 				</ul>
 			</div>
 			<div class="lastComments">
-				<h3>Derniers commentaires</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. </p>
-				<p>Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure </p>
-				<p>dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. </p>
-				<p>Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure </p>
+				
+				<?php include 'INC/lastComments.php' ?>
 
 			</div>
 			<div class="lastArticles">
-				<h3>Derniers articles </h3>
-				<ul>
-					<li>
-						<a href="">
-							<div class="thumb"><img src="http://wp.templatepanic.com/wp-content/uploads/2012/02/final-fantasy-xiii-200x200.jpg" alt ="" /></div>
-							<div class="detail">
-								<h4>Final FAntasy XIII</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua.  </p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<div class="thumb"><img src="http://wp.templatepanic.com/wp-content/uploads/2012/02/final-fantasy-xiii-200x200.jpg" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="http://wp.templatepanic.com/wp-content/uploads/2012/02/final-fantasy-xiii-200x200.jpg" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="http://wp.templatepanic.com/wp-content/uploads/2012/02/final-fantasy-xiii-200x200.jpg" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="http://wp.templatepanic.com/wp-content/uploads/2012/02/final-fantasy-xiii-200x200.jpg" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-					<li>
-						<div class="thumb"><img src="http://wp.templatepanic.com/wp-content/uploads/2012/02/final-fantasy-xiii-200x200.jpg" alt ="" /></div>
-						<div class="detail">
-							<h4>Final FAntasy XIII</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.  </p>
-						</div>
-					</li>
-				</ul>
+				<?php include 'INC/lastPosts.php' ?>
 			</div>
 		</div> <!-- #sidebar -->
 

@@ -48,34 +48,10 @@ ini_set('display_errors',1);
                 </br>
 			</div>
 			<section class="lastArticles boxArticles">
-			<?php
-				$posts=$DB->query("SELECT id,titre,description,image from posts ORDER BY created_at LIMIT 6");
-			?>
-				<h3>Derniers articles </h3>
-				<ul>
-					<?php foreach ($posts as $posts): ?>
-					<li>
-						<a href="articles.php?id=<?php echo $posts->id; ?>">
-							<div class="thumb"><img src="<?php echo $posts->image; ?>" alt ="<?php $posts->titre ?>" /></div>
-							<div class="detail">
-								<h4><?php echo $posts->titre; ?></h4>
-								<p><?php echo Texte::limit($posts->description,130); ?></p>
-							</div>
-						</a>
-					</li>
-					<?php endforeach ?>
-				</ul>
+			<?php include 'INC/lastPosts.php' ?>
 			</section>
-
 			<section class="lastComments boxComments">
-				<?php 
-					$comments=$DB->query("SELECT id,texte from comments ORDER BY created_at LIMIT 5");
-				?>
-
-				<h3>Derniers commentaires</h3>
-				<?php foreach ($comments as $comments): ?> 
-					<p><?php echo Texte::limit($comments->texte,150); ?></p>
-				<?php endforeach ?>
+				<?php include 'INC/lastComments.php' ?>
 			</section>
 			<div class="clearfix"></div>
 			<div class="accueil">
