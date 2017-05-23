@@ -2,8 +2,18 @@
 
 include 'INC/includes.php';
 
+$categorie = 0;
+$cond = array();
+
 //pagination
-$nbr = $DB -> query("SELECT count(*) as nbr FROM posts");
+if (!empty($_GET['categorie']) && $_GET['categorie'] > 0) {
+	$categorie = intval($_GET['categorie']);
+	$cond = array('category_id' => $categorie);
+	$nbr = $DB -> query("SELECT count(*) as nbr FROM posts WHERE category_id=:category_id" ,$cond);
+}else
+	$nbr = $DB -> query("SELECT count(*) as nbr FROM posts");
+
+
 $perpage = 4;
 $nbr_pages = ceil($nbr[0]->nbr/$perpage);
 
@@ -19,12 +29,20 @@ if (isset($_GET['page'])) {
 $permierPage = ($page-1) * $perpage;
 
 //posts
-$sql ="SELECT posts.id,posts.titre,posts.description,posts.created_at,posts.image,posts.category_id,users.username,categories.name FROM posts
+
+if (!empty($_GET['categorie']) && $_GET['categorie'] > 0) {
+	$sql ='SELECT posts.id,posts.titre,posts.description,posts.created_at,posts.image,posts.category_id,users.username,categories.name FROM posts
 		INNER JOIN categories ON category_id= category.id
 		INNER JOIN users ON users_id = users.id
-		INNER JOIN created_at DESC LIMIT 4";
+		WHERE posts.category_id=:category_id
+		ORDER BY created_at DESC LIMIT '.$permierPage.','.$perpage;
+}else
+$sql ='SELECT posts.id,posts.titre,posts.description,posts.created_at,posts.image,posts.category_id,users.username,categories.name FROM posts
+		INNER JOIN categories ON category_id= category.id
+		INNER JOIN users ON users_id = users.id
+		ORDER BY created_at DESC LIMIT '.$permierPage.','.$perpage;
 
-$posts = $DB->query($sql);
+$posts = $DB->query($sql,$cond);
 
 // nombre de commentaires pas posts
 $ids = array();
@@ -80,7 +98,7 @@ include 'INC/header.php';
 						if ($i == $page) {
 							echo '<li class="active"><a href="">'.$i.'</a></li>';
 						}else{
-							echo '<li><a href="articles.php?page='.$i.'">'.$i.'</a></li>';
+							echo '<li><a href="articles.php?page='.$i.'&categorie='.$categorie.'">'.$i.'</a></li>';
 						}
 					}
 					?>
