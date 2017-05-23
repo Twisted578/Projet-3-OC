@@ -110,10 +110,16 @@ include 'INC/header.php';
 		<!-- SIDEBAR -->
 		<div id="sidebar">
 			<div class="category">
+
+				<?php 
+					$sql ="SELECT * FROM categories";
+					$cats = $DB->query($sql)
+				?>
 				<h3>Catégories</h3>
 				<ul>
-					<li><a href="">Résumé</a></li>
-					<li><a href="">Chapitres</a></li>
+					<?php foreach ($cats as $cat); ?>
+						<li><a href="articles.php?categorie=<?php echo $cat->id ?>;"><?php echo $cat->name; ?></a></li>
+					<?php endforeach ?>
 				</ul>
 			</div>
 			<div class="lastComments">
