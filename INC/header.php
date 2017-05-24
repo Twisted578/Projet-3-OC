@@ -65,7 +65,7 @@
 	    <div class="container clearfix">
 
 			<div id="logo">
-				<a href="index.html" title="Mon blog"><img  src="img/logo4.png" alt="Mon blog" /></a>
+				<a href="index.php" title="Mon blog"><img  src="img/logo4.png" alt="Mon blog" /></a>
 			</div>
 			<div id="reseaux">
 				<ul>
