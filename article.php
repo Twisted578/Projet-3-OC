@@ -15,6 +15,10 @@ if (empty($post)) {
 	exit();
 	}
 	$post = $post[0];
+
+	$sql = "SELECT comments.id,comments.texte,comments.created_at,comments.pseudo,users.avatar FROM comments
+			LEFT JOIN users ON user_id =user.id
+			WHERE post_id = $id";
 }else{
 	header('location : index.php');
 	exit();
@@ -30,7 +34,7 @@ include 'INC/header.php';
 		<!-- <div id="content"> -->
 			<div class="single">
 			
-			<div class="article">
+			<div class="article">		
 				<div class="thumbnail"><img  src="<?php echo $post->image ?>" alt="<?php echo $post->titre ?>" title="<?php echo $post->titret ?>" /></div>
 				<div class="infos" >
 					<h1><?php echo $post->titre; ?></h1>	
@@ -46,42 +50,19 @@ include 'INC/header.php';
 				</div>
 				<h2>Laisser un commentaire</h2>	
 				<div class="commentaires">
-					<div class="commentaire">
+					<?php foreach ($comment as $kcomment): ?>
+						<div class="commentaire">
 						<div class="avatar">
-							<img src="img/avatar.png" alt="avatar">
+							<img src="<?php echo $comment->avatar; ?>" alt="<?php echo $comment->pseudo; ?>">
 						</div>	
 						<div class="message">	
-							<div class="author">athakim <span> 15 -12-2012 à 16h31</span></div>
+							<div class="author"><?php echo $comment->pseudo; ?><span><?php echo Texte::french_date_time($comment->created_at); ?></span></div>
 							<div class="texte">
-								In hendrerit quam vel erat luctus cursus. Proin congue aliquet purus sodales gravida. Fusce ligula elit, laoreet ac vestibulum in, lobortis id leo. Quisque nec massa lectus, lobortis laoreet ante. 
+								<?php echo $comment->texte; ?>
 							</div>
 						</div>
 					</div>
-
-					<div class="commentaire">
-						<div class="avatar">
-							<img src="img/avatar.png" alt="avatar">
-						</div>	
-						<div class="message">	
-							<div class="author">athakim <span> 15 -12-2012 à 16h31</span></div>
-							<div class="texte">
-								In hendrerit quam vel erat luctus cursus. Proin congue aliquet purus sodales gravida. Fusce ligula elit, laoreet ac vestibulum in, lobortis id leo. Quisque nec massa lectus, lobortis laoreet ante. 
-							</div>
-						</div>
-					</div>
-
-					<div class="commentaire">
-						<div class="avatar">
-							<img src="img/avatar.png" alt="avatar">
-						</div>	
-						<div class="message">	
-							<div class="author">athakim <span> 15 -12-2012 à 16h31</span></div>
-							<div class="texte">
-								In hendrerit quam vel erat luctus cursus. Proin congue aliquet purus sodales gravida. Fusce ligula elit, laoreet ac vestibulum in, lobortis id leo. Quisque nec massa lectus, lobortis laoreet ante. 
-							</div>
-						</div>
-					</div>
-
+					<?php endforeach ?>
 					<form action="">
 						<p>
 							<label for="">Pseudo </label>
