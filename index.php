@@ -33,6 +33,17 @@ ini_set('display_errors',1);
 <!-- PAGE -->
 <div id="page">
     <div id ="contenuPage" class="container clearfix">	
+    	<!-- indicateur de session -->
+    		<?php if (isset($_SESSION['message'])): ?>
+    			<div class="alert_success"><?php echo $_SESSION['message']; ?></div>
+    			<?php unset($_SESSION['message']); ?>
+    		<?php endif ?>
+
+    		<?php if (isset($_SESSION['erreur'])): ?>
+    			<div class="alert_error"><?php echo $_SESSION['message']; ?></div>
+    			<?php unset($_SESSION['erreur']); ?>
+    		<?php endif ?>
+
 			<div class="accueil">
 				<h2>Bienvenue,</h2>
 				<p>

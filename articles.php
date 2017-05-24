@@ -8,7 +8,7 @@ $cond = array();
 //pagination
 if (!empty($_GET['categorie']) && $_GET['categorie'] > 0) {
 	$categorie = intval($_GET['categorie']);
-	$cond = array('category_id' => $categorie);
+	$cond = array('category_id' => $categorie); 
 	$nbr = $DB -> query("SELECT count(*) as nbr FROM posts WHERE category_id=:category_id" ,$cond);
 }else
 	$nbr = $DB -> query("SELECT count(*) as nbr FROM posts");

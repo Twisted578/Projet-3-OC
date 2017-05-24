@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 f023c89b19f0e0cffb835e69231053dda2058173 Guénolé <guenole578@gmail.com> 1495035854 +0200	commit (initial): Création de l'index et de l'include header
+f023c89b19f0e0cffb835e69231053dda2058173 254c33dcf78ba8fbe8da4513987de9be55ad66c1 Guénolé <guenole578@gmail.com> 1495038457 +0200	commit: projet v1 tout en html tout marche
+254c33dcf78ba8fbe8da4513987de9be55ad66c1 00dd51510c2caa5f359857b75c33fb80fed2e730 Guénolé <guenole578@gmail.com> 1495039939 +0200	commit: Rajout de l'include + les 6 raisons de faire ces deux métiers
+00dd51510c2caa5f359857b75c33fb80fed2e730 8d3f66c5a6857edf3dee608c5df2a35c4a5db043 Guénolé <guenole578@gmail.com> 1495042929 +0200	commit: rajout de la page contact
+8d3f66c5a6857edf3dee608c5df2a35c4a5db043 d3cacc278879889b6e61f5d16c0aba7d0b76f113 Guénolé <guenole578@gmail.com> 1495116775 +0200	commit: inclusion du footer dans les pages index et contact
+d3cacc278879889b6e61f5d16c0aba7d0b76f113 36bc7e5d1f4747d1ee89d04be232633d9bdc067d Guénolé <guenole578@gmail.com> 1495118438 +0200	commit: connexion à la db donc création des fichiers db.php, config.php ainsi que includes.php
+36bc7e5d1f4747d1ee89d04be232633d9bdc067d 737bc8ab42d8a8b7fd26b04b79d5b053329eeff8 Guénolé <guenole578@gmail.com> 1495451724 +0200	commit: rajout du code php dans l'index pour l'affichage des derniers articles dynamiquement
+737bc8ab42d8a8b7fd26b04b79d5b053329eeff8 464da68f4ed3b8fa9287492d7472f85a404e54f8 Guénolé <guenole578@gmail.com> 1495456402 +0200	commit: code php aussi pour les commentaires dynamique et changement des extensions du header (passage en php et plus en html)
+464da68f4ed3b8fa9287492d7472f85a404e54f8 2b0dd39cbc14657dadc815d67a7b4f4834b542ee Guénolé <guenole578@gmail.com> 1495532031 +0200	commit: ajout de la page articles.php et (donc ajout du code dynamique php) et ajout de la classe array tquery pour le tableau associatif
+2b0dd39cbc14657dadc815d67a7b4f4834b542ee a7174e55f80ae32ddd5840c38a70e9259f11d130 Guénolé <guenole578@gmail.com> 1495535452 +0200	commit: ajout de la pagination
+a7174e55f80ae32ddd5840c38a70e9259f11d130 a3b2ec30bc73e91848f4c7522549e3079ef72f93 Guénolé <guenole578@gmail.com> 1495537183 +0200	commit: ajout du code php pour les catégories

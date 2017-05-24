@@ -49,5 +49,10 @@ class Db{
 		return $req->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	public function insert($sql,$data=array()){
+		$req = $this->connexion->prepare($sql);
+		$nbr = $req->execute($data);
+		return $nbr;
+	}
 
 }

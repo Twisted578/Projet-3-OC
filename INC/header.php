@@ -32,7 +32,7 @@
 		<!-- MENU -->		
 		<div id="navigation">
 				<ul id="menu" class="menu">
-					<li ><a href="index.php">Acceuil</a></li>
+					<li ><a href="index.php">Accueil</a></li>
 					<li ><a href="articles.php">Livre</a></li>
 					<li ><a href="contact.php">Contact</a></li>
 					
