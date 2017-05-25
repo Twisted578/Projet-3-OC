@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 			$erreur_pseudo = "Un pseudo est requis.";
 			$validate = false;
 		}elseif(!User::pseudo_unique($DB,$_POST['pseudo']) && !User::islog($DB)){
-				$erreur_pseudo = "Ce pseudo est déjà utilisé par un autre utilisateur.";
+				$erreur_pseudo = "Pseudo déja pris par un autre utilisateur.";
 				$validate = false;
 			}
 
@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 				$erreur_email = "Adresse Email non valide !";
 				$validate = false;
 			}elseif(!User::email_unique($DB,$_POST['email']) && !User::islog($DB)){
-				$erreur_email = "Cette adresse email est déjà utilisé par un autre utilisateur.";
+				$erreur_email = "Adresse Email déjà prise par un autre utilisateur.";
 				$validate = false;
 			}
 
@@ -56,10 +56,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 			$rep = $DB->insert($sql,$data);
 
 			if($rep){
-				$_SESSION['message'] = "Commentaire envoyé.";
+				$_SESSION['message'] = "Votre commentaire a bien été envoyé !";
 				unset($_POST);
 			}else{
-				$_SESSION['erreur'] = "Votre commentaire n'a pas pu être sauvegardé."; 
+				$_SESSION['erreur'] = "Il y a eu un problème de sauvegarde avec votre commentaire .";
 			}
 
 

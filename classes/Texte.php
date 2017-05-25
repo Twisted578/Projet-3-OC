@@ -21,19 +21,6 @@ class Texte{
 
 		return $french;
 	}
-	public static function french_date_time($d){
-
-		$mois = array('Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jui', 'Juil', 'Aout', 'Sep', 'Oct', 'Nov', 'Dec');
-
-		$blocs = explode(' ',$d);
-		$date = explode('-',$blocs[0]);
-
-		$time = explode(':',$blocs[1]);
-
-		$french = $date[2].' '.$mois[$date[1]-1].' '.$date[0].' à '.$time[0].':'.$time[1];
-
-		return $french;
-	}
 }
 
 
