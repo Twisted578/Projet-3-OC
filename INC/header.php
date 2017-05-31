@@ -40,8 +40,13 @@
 
 				<div class="membres">
 					<ul>
-						<li><a href="login.php">Se connecter</a></li>
-						<li><a href="signup.php">S'inscrire</a></li>
+						<?php if (User::auth()): ?>
+							<li><a href="login.php?logout">Se déconnecter</a></li>
+							<li><a href="compte.php">Mon compte</a></li>
+						<?php else: ?>
+							<li><a href="login.php">Se connecter</a></li>
+							<li><a href="signup.php">S'inscrire</a></li>
+						<?php endif ?>
 					</ul>
 				</div>		
 	
