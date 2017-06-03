@@ -45,28 +45,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			'token' => $token
 			);
 		$rep = $DB -> insert('INSERT INTO users (username,email,password,token,created_at,updated_at) VALUES (:username,:email,:password,:token,NOW(),NOW())',$data);
+
 		if ($rep) {
-			
-			$mail_to = $_POST['email'];
-			$mail_subject = "Activation du compte utilisateur";
-			$headers = "From : guenole-lequentrec.ovh";
-			$headers .= "Reply-To: guenole578@gmail.com \n";
-			$headers .= "MIME-Vsersion : 1.0 \n";
-			$headers .= "Content-type : text/html; charset=utf-8 \n";
-
-			$mail_body = 'Bonjour </br> Veuillez cliquer sur le <a href:"http://guenole-lequentrec.ovh/activate.php='.$token.'&email='.$_POST['email'].'">le lien pour activer votre compte .</a>';
-
-			if (mail($mail_to, $mail_subject, $mail_body, $headers)) {
-				$_SESSION['message'] = "Un email a été envoyé sur votre boite mail pour l'activation de votre compte .";
-				unset($_POST);
-			}else{
-				$_SESSION['erreur'] = "Un problème est survenu lors de l'envoie de l'email, Veuillez vérifier vos informations .";
-			}
+				$_SESSION['message'] = "Bravo votre compte à bien été crée .";
 		}else{
 			$_SESSION['erreur'] = "Un problème est survenu lors de l'enregistrement de votre compte, Veuillez réessayer ultérieurement .";
 		}
 	}
+
 }
+
 
 
 include 'INC/header.php';
