@@ -1,6 +1,4 @@
-<?php include 
-
-'INC/includes.php';
+<?php include 'INC/includes.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 
@@ -20,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 			$erreur_pseudo = "Un pseudo est requis.";
 			$validate = false;
 		}elseif(!User::pseudo_unique($DB,$_POST['pseudo']) && !User::islog($DB)){
-				$erreur_pseudo = "Pseudo déja pris par un autre utilisateur.";
+				$erreur_pseudo = "Pseudo déja pris .";
 				$validate = false;
 			}
 
@@ -31,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 				$erreur_email = "Adresse Email non valide !";
 				$validate = false;
 			}elseif(!User::email_unique($DB,$_POST['email']) && !User::islog($DB)){
-				$erreur_email = "Adresse Email déjà prise par un autre utilisateur.";
+				$erreur_email = "Adresse Email déja utilisée par un membre .";
 				$validate = false;
 			}
 
@@ -56,7 +54,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 			$rep = $DB->insert($sql,$data);
 
 			if($rep){
-				$_SESSION['message'] = "Votre commentaire a bien été envoyé !";
+				$_SESSION['message'] = "Merci pour le commentaire .";
 				unset($_POST);
 			}else{
 				$_SESSION['erreur'] = "Il y a eu un problème de sauvegarde avec votre commentaire .";
